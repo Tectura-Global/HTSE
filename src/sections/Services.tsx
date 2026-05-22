@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import dataPoints from '@/data/dataPoint';
 import Hypermenu from '@/components/Hypermenu';
 

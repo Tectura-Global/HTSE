@@ -1,6 +1,4 @@
 import "@/styles/why.css"
-import { useState } from 'react';
-import Hypermenu from '@/components/Hypermenu';
 import { TextReveal } from "@/components/ui/text-reveal"
 
 function Why() {

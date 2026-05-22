@@ -1,6 +1,4 @@
 import "@/styles/hero.css"
-import { motion } from 'framer-motion'
-import { Globe } from "@/components/ui/globe"
 import MagicRings from '@/components/MagicRings';
 
 export default function Hero() {

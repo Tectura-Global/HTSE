@@ -1,5 +1,4 @@
 import '@/styles/CTA.css'
-import { MagicCard } from "@/components/ui/magic-card"
 import { AnimatedList } from "@/components/ui/animated-list"
 import { LuBrainCircuit } from "react-icons/lu";
 import { LuBadgeCheck } from "react-icons/lu";
