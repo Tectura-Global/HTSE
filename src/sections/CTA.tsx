@@ -6,25 +6,67 @@ import { LuCpu } from "react-icons/lu";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-function CTA () {
+const descriptionLines = [
+    "Tectura Global/Techadome is a company specialising on integration of technology Solutions in Buildings, Healthcare Technology, and Intelligent Infrastructure.",
+    "We bridge the gap between cutting-edge technology and real-world operational needs, delivering end-to-end solutions that enhance safety, efficiency, compliance, and patient experience across healthcare facilities.​"
+]
 
+const cards = [
+    {
+        icon: <LuBrainCircuit className='cta-card-icon' />,
+        title: "Security-First",
+        text: "From managed firewalls to advanced threat protection, we protect what matters most."
+    },
+    {
+        icon: <LuCpu className='cta-card-icon' />,
+        title: "Technology Systems",
+        text: "We're embedded in the construction process from day one, not bolted on after."
+    },
+    {
+        icon: <LuBrainCircuit className='cta-card-icon' />,
+        title: "Integrated Ecosystem",
+        text: "SD-WAN, NOC-as-a-Service, and enterprise networking keep your business running"
+    },
+]
+
+function CTA () {
     const listRef = useRef(null)
+    const headerRef = useRef(null)
+    const cardsRef = useRef(null)
+
     const isInView = useInView(listRef, { once: true, margin: "-100px" })
+    const headerInView = useInView(headerRef, { once: true, margin: "-50px" })
+    const cardsInView = useInView(cardsRef, { once: true, margin: "-50px" })
 
     return (
         <section id="cta">
-            <header>
-                <h1 className="site-heading">
-                    Tectura Global's<br></br>                
+            <header ref={headerRef}>
+                <motion.h1
+                    className="site-heading"
+                    initial={{ opacity: 0, y: 60 }}
+                    animate={headerInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                    Tectura Global's<br />
                     <span>Identity</span>
-                </h1>
-                <p className="site-p">
-                    Tectura Global/Techadome is a company specialising on integration of technology Solutions in Buildings, Healthcare Technology, and Intelligent Infrastructure.
-                    We bridge the gap between cutting-edge technology and real-world operational needs, delivering end-to-end solutions that enhance safety, efficiency, compliance, and patient experience across healthcare facilities.​
-                </p>
-            </header>
-            <div className="cta-list-wrapper" ref={listRef}>
+                </motion.h1>
 
+                <div>
+                    {descriptionLines.map((line, i) => (
+                        <motion.p
+                            key={i}
+                            className="site-p"
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={headerInView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.5, delay: 0.3 + i * 0.15, ease: "easeOut" }}
+                        >
+                            {line}
+                        </motion.p>
+                    ))}
+                </div>
+            </header>
+
+            <div className="cta-list-wrapper" ref={listRef}>
                 {isInView && (
                     <AnimatedList className='cta-list'>
                         <div className="cta-list-item">
@@ -50,40 +92,23 @@ function CTA () {
                     </AnimatedList>
                 )}
             </div>
-            <div className="cta-extension">
-                <div className="cta-card">
-                    <LuBrainCircuit className='cta-card-icon' />
-                    <div className="cta-content">
-                        <h3 className="cta-title site-heading">
-                            Security-First
-                        </h3>
-                        <p className="cta-text site-p">
-                            From managed firewalls to advanced threat protection, we protect what matters most.
-                        </p>
-                    </div>
-                </div>
-                <div className="cta-card">
-                    <LuCpu className='cta-card-icon' />
-                    <div className="cta-content">
-                        <h3 className="cta-title site-heading">
-                            Technology Systems
-                        </h3>
-                        <p className="cta-text site-p">
-                            We're embedded in the construction process from day one, not bolted on after.
-                        </p>
-                    </div>
-                </div>
-                <div className="cta-card">
-                    <LuBrainCircuit className='cta-card-icon' />  
-                    <div className="cta-content">
-                        <h3 className="cta-title site-heading">
-                            Integrated Ecosystem
-                        </h3>
-                        <p className="cta-text site-p">
-                            SD-WAN, NOC-as-a-Service, and enterprise networking keep your business running
-                        </p>
-                    </div>
-                </div>
+
+            <div className="cta-extension" ref={cardsRef}>
+                {cards.map((card, i) => (
+                    <motion.div
+                        key={i}
+                        className="cta-card"
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={cardsInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
+                    >
+                        {card.icon}
+                        <div className="cta-content">
+                            <h3 className="cta-title site-heading">{card.title}</h3>
+                            <p className="cta-text site-p">{card.text}</p>
+                        </div>
+                    </motion.div>
+                ))}
             </div>
         </section>
     )
