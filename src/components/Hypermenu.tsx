@@ -1,11 +1,11 @@
 import "@/styles/hypermenu.css"
 import { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion"
 
 interface Point {
     heading: string;
     body: string;
 }
-
 interface DataPoint {
     id: number;
     title: string;
@@ -16,7 +16,6 @@ interface DataPoint {
 
 function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
     const [activePanel, setActivePanel] = useState(dataPoints[0]);
-
     return (
         <section id="hypermenu">
             <div className="hypermenu-wrapper">
@@ -39,18 +38,45 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
                         ))}
                     </ul>
                 </aside>
-                <div
-                    id="hypermenu-panels"
-                    key={activePanel.id}
-                    className='animate__animated animate__fadeIn'
-                >
-                    {activePanel.points.map((point, index) => (
-                        <div key={index} id={`panel-${index + 1}`} className='hypermenu-panel'>
-                            <h3 className="site-heading">{point.heading}</h3>
-                            <p className="site-p">{point.body}</p>
-                        </div>
-                    ))}
-                </div>
+
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        id="hypermenu-panels"
+                        key={activePanel.id}
+                        initial={{ opacity: 0, scale: 0.97 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.97 }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
+                    >
+                        {activePanel.points.map((point, index) => (
+                            <motion.div
+                                key={index}
+                                id={`panel-${index + 1}`}
+                                className='hypermenu-panel'
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
+                            >
+                                <motion.h3
+                                    className="site-heading"
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.3, delay: index * 0.05 + 0.1 }}
+                                >
+                                    {point.heading}
+                                </motion.h3>
+                                <motion.p
+                                    className="site-p"
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.3, delay: index * 0.05 + 0.15 }}
+                                >
+                                    {point.body}
+                                </motion.p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </section>
     )

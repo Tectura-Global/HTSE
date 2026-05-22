@@ -1,14 +1,29 @@
 import "@/styles/hero.css"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 import MagicRings from '@/components/MagicRings';
 
 export default function Hero() {
+
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
+
     return (
         <section id="hero">
             <div className="content">
                 <h1 className="site-heading">
+                    
+                </h1>
+                <motion.h1
+                    ref={ref}
+                    className="site-heading"
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     Healthcare Technology<br></br>
                     <span>Ecosystem Solutions</span>
-                </h1>
+                </motion.h1>
                 <p className="site-p">
                     Smart Buildings · Intelligent Healthcare · Integrated Technology
                 </p>

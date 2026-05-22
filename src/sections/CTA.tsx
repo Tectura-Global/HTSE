@@ -3,8 +3,13 @@ import { AnimatedList } from "@/components/ui/animated-list"
 import { LuBrainCircuit } from "react-icons/lu";
 import { LuBadgeCheck } from "react-icons/lu";
 import { LuCpu } from "react-icons/lu";
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
 function CTA () {
+
+    const listRef = useRef(null)
+    const isInView = useInView(listRef, { once: true, margin: "-100px" })
 
     return (
         <section id="cta">
@@ -18,28 +23,33 @@ function CTA () {
                     We bridge the gap between cutting-edge technology and real-world operational needs, delivering end-to-end solutions that enhance safety, efficiency, compliance, and patient experience across healthcare facilities.​
                 </p>
             </header>
-            <AnimatedList className='cta-list'>
-                <div className="cta-list-item">
-                    <LuBadgeCheck className='cta-list-icon' />
-                    <p className="site-p">End-to-end system integration</p>
-                </div>
-                <div className="cta-list-item">
-                    <LuBadgeCheck className='cta-list-icon' />
-                    <p className="site-p">Healthcare-specific expertise</p>
-                </div>
-                <div className="cta-list-item">
-                    <LuBadgeCheck className='cta-list-icon' />
-                    <p className="site-p">Cybersecurity & compliance</p>
-                </div>
-                <div className="cta-list-item">
-                    <LuBadgeCheck className='cta-list-icon' />
-                    <p className="site-p">Real-time monitoring & analytics</p>
-                </div>
-                <div className="cta-list-item">
-                    <LuBadgeCheck className='cta-list-icon' />
-                    <p className="site-p">Scalable smart building platforms</p>
-                </div>
-            </AnimatedList>
+            <div className="cta-list-wrapper" ref={listRef}>
+
+                {isInView && (
+                    <AnimatedList className='cta-list'>
+                        <div className="cta-list-item">
+                            <LuBadgeCheck className='cta-list-icon' />
+                            <p className="site-p">End-to-end system integration</p>
+                        </div>
+                        <div className="cta-list-item">
+                            <LuBadgeCheck className='cta-list-icon' />
+                            <p className="site-p">Healthcare-specific expertise</p>
+                        </div>
+                        <div className="cta-list-item">
+                            <LuBadgeCheck className='cta-list-icon' />
+                            <p className="site-p">Cybersecurity & compliance</p>
+                        </div>
+                        <div className="cta-list-item">
+                            <LuBadgeCheck className='cta-list-icon' />
+                            <p className="site-p">Real-time monitoring & analytics</p>
+                        </div>
+                        <div className="cta-list-item">
+                            <LuBadgeCheck className='cta-list-icon' />
+                            <p className="site-p">Scalable smart building platforms</p>
+                        </div>
+                    </AnimatedList>
+                )}
+            </div>
             <div className="cta-extension">
                 <div className="cta-card">
                     <LuBrainCircuit className='cta-card-icon' />
