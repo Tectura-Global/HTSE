@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #000c1a;
+    }
+
+    main {
+        gap: 10rem;
+        display: flex;
+        flex-direction: column;
+        background-attachment: fixed;
+        background-image: radial-gradient(
+            circle at 1px 1px,
+            rgba(24, 88, 161, 0.5) 1px,
+            transparent 0
+        );
+        background-size: 24px 24px;
+    }
+}
+
+@layer components {
+    .site-heading {
+        font-family: 'Unbounded';
+    }
+
+    .site-p {
+        font-family: 'Geist Mono';
+    }
+}

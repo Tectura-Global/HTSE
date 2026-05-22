@@ -1,0 +1,11 @@
+@layer component {
+    #why {
+        height: 100vh;
+        padding: 2rem;
+    }
+
+    #why .site-heading {
+        color: #ffffff;
+        font-size: 3vw;
+    }
+}

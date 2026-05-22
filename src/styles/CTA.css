@@ -1,0 +1,126 @@
+@layer component {
+    #cta {
+        gap: 1rem;
+        height: 100vh;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+    }
+
+    #cta header {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    #cta header .site-p{
+        color: #ffffff;
+    }
+
+    .cta-list {
+        gap: 1rem;
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column;
+        grid-area: 1 / 3 / 3 / 5;
+        align-items: flex-end;
+    }
+
+    .cta-list-item {
+        gap: 1rem;
+        height: 4rem;
+        display: flex;
+        width: 24rem;
+        padding: 0 1rem;
+        align-items: center;
+        border-radius: .25rem;
+        border: 1px solid #ffffff30;
+        background-color: #ffffff15;
+    }
+
+    .cta-list-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: #ffffff30;
+    }
+
+    .cta-list-item .site-p {
+        font-size: .9rem;
+        color: #ffffff;
+    }
+
+    #cta .site-heading {
+        color: #ffffff;
+    }
+
+    #cta .site-heading span {
+        color: #3a7dce;
+    }
+    
+    .cta-extension {
+        gap: 1rem;
+        display: flex;
+        border-radius: .25rem;
+        grid-area: 3 / 1 / 5 / 5;
+    }
+    
+    .cta-card {
+        z-index: 10;
+        height: 20rem;
+        padding: 1rem;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        border-radius: .25rem;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid #3a7dce;
+    }
+    
+    .cta-card-icon {
+        top: 1rem;
+        left: 1rem;
+        opacity: 1;
+        width: 25%;
+        height: fit-content;
+        position: absolute;
+        color: #1E92A3;
+        transition: .5s ease opacity,
+                    .5s ease transform;
+    }
+    
+    .cta-card:hover {
+        background-color: #1E92A3;
+    }
+    
+    .cta-card:hover .cta-card-icon {
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+
+    .cta-content {
+        flex: 1;
+        display: flex;
+        transform: translateY(calc(100% - 2vw));
+        flex-direction: column;
+        transition: .5s ease top,
+        .5s ease transform;
+        justify-content: space-between;
+    }
+
+    .cta-title {
+        color: #ffffff;
+        font-size: 1.5vw;
+    }
+
+    .cta-text {
+        color: #ffffff;
+    }
+
+    .cta-card:hover .cta-content {
+        flex: 1;
+        transform: translateY(0);
+    }
+}
