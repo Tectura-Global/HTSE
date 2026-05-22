@@ -34,9 +34,9 @@ function CTA () {
     const headerRef = useRef(null)
     const cardsRef = useRef(null)
 
-    const isInView = useInView(listRef, { once: true, margin: "-50vh" })
-    const headerInView = useInView(headerRef, { once: true, margin: "-50vh" })
-    const cardsInView = useInView(cardsRef, { once: true, margin: "-50vh" })
+    const isInView = useInView(listRef, { once: true, margin: "-500px" })
+    const headerInView = useInView(headerRef, { once: true, margin: "-500px" })
+    const cardsInView = useInView(cardsRef, { once: true, margin: "-500px" })
 
     return (
         <section id="cta">
