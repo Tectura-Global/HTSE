@@ -30,39 +30,58 @@ export interface AnimatedListProps extends ComponentPropsWithoutRef<"div"> {
 
 export const AnimatedList = React.memo(
   ({ children, className, delay = 1000, ...props }: AnimatedListProps) => {
-    const [index, setIndex] = useState(0)
     const childrenArray = useMemo(
       () => React.Children.toArray(children),
       [children]
     )
 
+    const [index, setIndex] = useState(0)
+    const [direction, setDirection] = useState<1 | -1>(1)
+
     useEffect(() => {
       let timeout: ReturnType<typeof setTimeout> | null = null
 
-      if (index < childrenArray.length - 1) {
-        timeout = setTimeout(() => {
-          setIndex((prevIndex) => (prevIndex + 1) % childrenArray.length)
-        }, delay)
-      }
+      timeout = setTimeout(() => {
+        setIndex((prev) => {
+          const max = childrenArray.length - 1
+
+          // ➜ FORWARD: build list
+          if (direction === 1) {
+            if (prev < max) return prev + 1
+
+            // reached end → start removing
+            setDirection(-1)
+            return prev
+          }
+
+          // ➜ BACKWARD: remove list items one by one
+          if (direction === -1) {
+            if (prev > 0) return prev - 1
+
+            // reached start → restart cycle
+            setDirection(1)
+            return 0
+          }
+
+          return prev
+        })
+      }, delay)
 
       return () => {
-        if (timeout !== null) {
-          clearTimeout(timeout)
-        }
+        if (timeout) clearTimeout(timeout)
       }
-    }, [index, delay, childrenArray.length])
+    }, [index, direction, delay, childrenArray.length])
 
     const itemsToShow = useMemo(() => {
-      const result = childrenArray.slice(0, index + 1).reverse()
-      return result
+      return childrenArray.slice(0, index + 1).reverse()
     }, [index, childrenArray])
 
     return (
       <div
-        className={cn(`flex flex-col items-center gap-4`, className)}
+        className={cn("flex flex-col items-center gap-4", className)}
         {...props}
       >
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout">
           {itemsToShow.map((item) => (
             <AnimatedListItem key={(item as React.ReactElement).key}>
               {item}

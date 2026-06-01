@@ -1,7 +1,7 @@
 .card-beam-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,18 +9,19 @@
 }
 
 .beam-col {
-    gap: 5rem;
+    gap: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .beam-node {
-    width: 6rem;
-    height: 6rem;
+    width: 12rem;
+    height: 12rem;
+    z-index: 99;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    background: #ffffff
 }
 
 .beam-node.center {

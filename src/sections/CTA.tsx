@@ -7,24 +7,28 @@ import { LuCpu } from "react-icons/lu";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Marquee } from "@/components/ui/marquee"
+import {
+  ScrollVelocityContainer,
+  ScrollVelocityRow,
+} from "@/components/ui/scroll-based-velocity"
 import { TextAnimate } from "@/components/ui/text-animate"
 
 
 const cards = [
     {
         icon: <LuBrainCircuit className='cta-card-icon' />,
-        title: "Core Pillars",
-        text: "From managed firewalls to advanced threat protection, we protect what matters most."
+        title: "Intelligent Building Solutions",
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum tempore, aliquam necessitatibus vel velit voluptates!"
     },
     {
         icon: <LuCpu className='cta-card-icon' />,
-        title: "Technology Systems",
-        text: "We're embedded in the construction process from day one, not bolted on after."
+        title: "Procurement, Installation & support",
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum tempore, aliquam necessitatibus vel velit voluptates!"
     },
     {
         icon: <LuBrainCircuit className='cta-card-icon' />,
         title: "Integrated Ecosystem",
-        text: "SD-WAN, NOC-as-a-Service, and enterprise networking keep your business running"
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum tempore, aliquam necessitatibus vel velit voluptates!"
     },
 ]
 
@@ -81,23 +85,23 @@ function CTA () {
                 )}
             </div>
 
-            <Marquee className="cta-extension">
-                {cards.map((card, i) => (
-                    <div key={i} className="cta-card">
-                        {card.icon}
+            <div className="cta-extension">
+                    {cards.map((card, i) => (
+                        <div key={i} className="cta-card">
+                            {card.icon}
 
-                        <div className="cta-content">
-                            <h3 className="cta-title site-heading">
-                            {card.title}
-                            </h3>
+                            <div className="cta-content">
+                                <h3 className="cta-title site-heading">
+                                {card.title}
+                                </h3>
 
-                            <p className="cta-text site-p">
-                            {card.text}
-                            </p>
+                                <p className="cta-text site-p">
+                                {card.text}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </Marquee>
+                    ))}
+            </div>
         </section>
     )
 }

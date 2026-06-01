@@ -21,7 +21,7 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
             <div className="hypermenu-wrapper">
                 <aside id="hypermenu-sidebar">
                     <div className='header'>
-                        <h2 className="site-heading title facility-protection-safety">{activePanel.title}</h2>
+                        <h2 className={`site-heading title ${activePanel.slug}`}>{activePanel.title}</h2>
                         <p className='description site-p'>
                             {activePanel.description}
                         </p>
@@ -52,13 +52,13 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
                             <motion.div
                                 key={index}
                                 id={`panel-${index + 1}`}
-                                className='hypermenu-panel'
+                                className={`hypermenu-panel ${activePanel.slug}`}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
                             >
                                 <motion.h3
-                                    className="site-heading"
+                                    className={`site-heading ${activePanel.slug}`}
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.3, delay: index * 0.05 + 0.1 }}

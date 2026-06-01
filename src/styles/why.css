@@ -23,8 +23,4 @@
         margin: 0 auto;
         margin-bottom: 8rem;
     }
-
-    #why .card-beam-container {
-        height: calc(100% - 8rem);
-    }
 }

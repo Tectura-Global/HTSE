@@ -17,9 +17,15 @@ function CardBeam() {
         <div ref={containerRef} className="card-beam-container">
             {/* Left column */}
             <div className="beam-col left">
-                <div ref={n1} className="beam-node" />
-                <div ref={n2} className="beam-node" />
-                <div ref={n3} className="beam-node" />
+                <div ref={n1} className="beam-node">
+                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                </div>
+                <div ref={n2} className="beam-node">
+                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                </div>
+                <div ref={n3} className="beam-node">
+                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                </div>
             </div>
 
             {/* Center */}
@@ -30,17 +36,23 @@ function CardBeam() {
 
             {/* Right column */}
             <div className="beam-col right">
-                <div ref={n4} className="beam-node" />
-                <div ref={n5} className="beam-node" />
-                <div ref={n6} className="beam-node" />
+                <div ref={n4} className="beam-node">
+                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                </div>
+                <div ref={n5} className="beam-node">
+                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                </div>
+                <div ref={n6} className="beam-node">
+                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                </div>
             </div>
 
-            <AnimatedBeam containerRef={containerRef} fromRef={n1} toRef={centerRef} curvature={-120} duration={4}/>
-            <AnimatedBeam containerRef={containerRef} fromRef={n2} toRef={centerRef} duration={4}/>
-            <AnimatedBeam containerRef={containerRef} fromRef={n3} toRef={centerRef} curvature={120} duration={4}/>
-            <AnimatedBeam containerRef={containerRef} fromRef={n4} toRef={centerRef} curvature={-120} reverse duration={4}/>
-            <AnimatedBeam containerRef={containerRef} fromRef={n5} toRef={centerRef} reverse duration={4}/>
-            <AnimatedBeam containerRef={containerRef} fromRef={n6} toRef={centerRef} curvature={120} reverse duration={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n1} toRef={centerRef} curvature={-160} duration={4} pathWidth={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n2} toRef={centerRef} duration={4} pathWidth={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n3} toRef={centerRef} curvature={160} duration={4} pathWidth={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n4} toRef={centerRef} curvature={-160} reverse duration={4} pathWidth={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n5} toRef={centerRef} reverse duration={4} pathWidth={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n6} toRef={centerRef} curvature={160} reverse duration={4} pathWidth={4}/>
         </div>
     )
 }
