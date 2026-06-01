@@ -1,6 +1,5 @@
 import { useRef } from "react"
 import '@/styles/cardbeam.css'
-import { BorderBeam } from "@/components/ui/border-beam"
 import { AnimatedBeam } from "@/components/ui/animated-beam"
 
 function CardBeam() {
