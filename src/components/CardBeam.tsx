@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import '@/styles/cardbeam.css'
+import { ShineBorder } from "@/components/ui/shine-border"
 import { AnimatedBeam } from "@/components/ui/animated-beam"
 
 function CardBeam() {
@@ -22,7 +23,10 @@ function CardBeam() {
             </div>
 
             {/* Center */}
-            <div ref={centerRef} className="beam-node center" />
+            <div ref={centerRef} className="beam-node center">
+                <img src="tectura.png" className="center-node-logo"/>
+                <ShineBorder borderWidth={4} shineColor={'#009a83'} />
+            </div>
 
             {/* Right column */}
             <div className="beam-col right">
@@ -31,12 +35,12 @@ function CardBeam() {
                 <div ref={n6} className="beam-node" />
             </div>
 
-            <AnimatedBeam containerRef={containerRef} fromRef={n1} toRef={centerRef} curvature={-120} />
-            <AnimatedBeam containerRef={containerRef} fromRef={n2} toRef={centerRef} />
-            <AnimatedBeam containerRef={containerRef} fromRef={n3} toRef={centerRef} curvature={120} />
-            <AnimatedBeam containerRef={containerRef} fromRef={n4} toRef={centerRef} curvature={-120} reverse />
-            <AnimatedBeam containerRef={containerRef} fromRef={n5} toRef={centerRef} reverse />
-            <AnimatedBeam containerRef={containerRef} fromRef={n6} toRef={centerRef} curvature={120} reverse />
+            <AnimatedBeam containerRef={containerRef} fromRef={n1} toRef={centerRef} curvature={-120} duration={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n2} toRef={centerRef} duration={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n3} toRef={centerRef} curvature={120} duration={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n4} toRef={centerRef} curvature={-120} reverse duration={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n5} toRef={centerRef} reverse duration={4}/>
+            <AnimatedBeam containerRef={containerRef} fromRef={n6} toRef={centerRef} curvature={120} reverse duration={4}/>
         </div>
     )
 }
