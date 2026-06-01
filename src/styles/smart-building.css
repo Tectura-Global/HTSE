@@ -1,0 +1,34 @@
+#smart-building {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#smart-building .site-heading {
+    font-size: 5.2vw;
+    color: #fff;
+    text-align: center;
+}
+
+#smart-building .orbit-wrapper {
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+#smart-building .orbit-graphic {
+    display: grid;
+    position: relative;
+    place-items: center;
+}
+
+.orbit-graphic svg circle {
+  stroke: rgba(168, 85, 247, 0.25) !important; /* purple */
+  stroke-width: 2px !important;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.15)) !important;
+}
+
+#smart-building .orbit-graphic .site-p {
+    color: #fff;
+}

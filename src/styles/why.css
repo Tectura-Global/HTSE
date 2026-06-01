@@ -1,11 +1,30 @@
 @layer component {
     #why {
-        height: 100vh;
+        min-height: 100vh;
         padding: 2rem;
+        display: flex;
+        flex-direction: column;
     }
 
-    #why .site-heading {
+    #why .site-heading.section-title {
+        /* color: #ffffff; */
+        font-size: 7vw;
+        text-align: center;
+        margin-bottom: 3rem;
+        background: -webkit-linear-gradient(#eee 30%, #33333300);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #why .site-p.section-description {
+        width: 50%;
         color: #ffffff;
-        font-size: 3vw;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 8rem;
+    }
+
+    #why .card-beam-container {
+        height: calc(100% - 8rem);
     }
 }

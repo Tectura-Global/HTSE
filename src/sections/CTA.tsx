@@ -1,20 +1,19 @@
 import '@/styles/CTA.css'
+import '@/index.css'
 import { AnimatedList } from "@/components/ui/animated-list"
 import { LuBrainCircuit } from "react-icons/lu";
 import { LuBadgeCheck } from "react-icons/lu";
 import { LuCpu } from "react-icons/lu";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import { Marquee } from "@/components/ui/marquee"
+import { TextAnimate } from "@/components/ui/text-animate"
 
-const descriptionLines = [
-    "Tectura Global/Techadome is a company specialising on integration of technology Solutions in Buildings, Healthcare Technology, and Intelligent Infrastructure.",
-    "We bridge the gap between cutting-edge technology and real-world operational needs, delivering end-to-end solutions that enhance safety, efficiency, compliance, and patient experience across healthcare facilities.​"
-]
 
 const cards = [
     {
         icon: <LuBrainCircuit className='cta-card-icon' />,
-        title: "Security-First",
+        title: "Core Pillars",
         text: "From managed firewalls to advanced threat protection, we protect what matters most."
     },
     {
@@ -51,19 +50,10 @@ function CTA () {
                     <span>Identity</span>
                 </motion.h1>
 
-                <div>
-                    {descriptionLines.map((line, i) => (
-                        <motion.p
-                            key={i}
-                            className="site-p"
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.5, delay: 0.3 + i * 0.15, ease: "easeOut" }}
-                        >
-                            {line}
-                        </motion.p>
-                    ))}
-                </div>
+                <TextAnimate animation='blurInUp' by='word' className='site-p'>
+                    Tectura Global/Techadome is a company specialising on integration of technology Solutions in Buildings, Healthcare Technology, and Intelligent Infrastructure.
+                    We bridge the gap between cutting-edge technology and real-world operational needs, delivering end-to-end solutions that enhance safety, efficiency, compliance, and patient experience across healthcare facilities.
+                </TextAnimate>
             </header>
 
             <div className="cta-list-wrapper" ref={listRef}>
@@ -93,23 +83,23 @@ function CTA () {
                 )}
             </div>
 
-            <div className="cta-extension" ref={cardsRef}>
+            <Marquee className="cta-extension">
                 {cards.map((card, i) => (
-                    <motion.div
-                        key={i}
-                        className="cta-card"
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={cardsInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
-                    >
+                    <div key={i} className="cta-card">
                         {card.icon}
+
                         <div className="cta-content">
-                            <h3 className="cta-title site-heading">{card.title}</h3>
-                            <p className="cta-text site-p">{card.text}</p>
+                            <h3 className="cta-title site-heading">
+                            {card.title}
+                            </h3>
+
+                            <p className="cta-text site-p">
+                            {card.text}
+                            </p>
                         </div>
-                    </motion.div>
+                    </div>
                 ))}
-            </div>
+            </Marquee>
         </section>
     )
 }
