@@ -2,12 +2,9 @@ import "@/styles/why.css"
 import "@/index.css"
 
 import CardBeam from "@/components/CardBeam"
-import { useRef } from "react"
 import { TextAnimate } from "@/components/ui/text-animate"
 
 function Why() {
-    
-    const motionRef = useRef(null)
     
     return (
         <section id="why">
