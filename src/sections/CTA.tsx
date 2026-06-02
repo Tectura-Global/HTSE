@@ -6,11 +6,6 @@ import { LuBadgeCheck } from "react-icons/lu";
 import { LuCpu } from "react-icons/lu";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Marquee } from "@/components/ui/marquee"
-import {
-  ScrollVelocityContainer,
-  ScrollVelocityRow,
-} from "@/components/ui/scroll-based-velocity"
 import { TextAnimate } from "@/components/ui/text-animate"
 
 

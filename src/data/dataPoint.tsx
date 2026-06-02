@@ -1,7 +1,13 @@
+import { FaShieldAlt } from "react-icons/fa";
+import { FaGears } from "react-icons/fa6";
+import { FaHeartbeat } from "react-icons/fa";
+import { MdOutlineChecklist } from "react-icons/md";
+
 const dataPoints = [
   { id: 1,
     title: "Facility Protection & Safety",
     slug: "facility-protection-safety",
+    icon: <FaShieldAlt />,
     description: "Protecting patients, staff, and assets with integrated physical security and life safety systems.",
     points: [
       { heading: "Access Control System", body: "Multi-layered access management with role-based permissions and audit trails across all hospital zones." },
@@ -15,6 +21,7 @@ const dataPoints = [
   { id: 2,
     title: "Intelligent Building Operations",
     slug: "intelligent-building-operations",
+    icon: <FaGears />,
     description: "Optimising hospital operations through intelligent automation, energy management, and predictive maintenance.",
     points: [
       { heading: "Building Management System (BMS)", body: "Centralised control of HVAC, lighting, power, and MEP systems with real-time dashboards." },
@@ -28,6 +35,7 @@ const dataPoints = [
   { id: 3,
     title: "Health & Regulatory Standards",
     slug: "health-regulatory-standards",
+    icon: <MdOutlineChecklist />,
     description: "Ensuring healthcare facilities meet the highest standards of health, hygiene, and regulatory compliance.",
     points: [
       { heading: "Healthy Building Dashboard", body: "Centralised real-time view of all building health metrics including IAQ, temperature, and occupancy." },
@@ -41,6 +49,7 @@ const dataPoints = [
   { id: 4,
     title: "Care Journey Excellence",
     slug: "care-journey-excellence",
+    icon: <FaHeartbeat />,
     description: "Enhancing every touchpoint of the patient journey: from arrival to discharge and everything in between.",
     points: [
       { heading: "Visitor Management", body: "Digital check-in, identity verification, badge printing, and visitor tracking across all hospital zones." },

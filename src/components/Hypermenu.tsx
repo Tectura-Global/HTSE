@@ -10,6 +10,7 @@ interface DataPoint {
     id: number;
     title: string;
     slug: string;
+    icon: React.ReactNode;
     description: string;
     points: Point[];
 }
@@ -21,7 +22,10 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
             <div className="hypermenu-wrapper">
                 <aside id="hypermenu-sidebar">
                     <div className='header'>
-                        <h2 className={`site-heading title ${activePanel.slug}`}>{activePanel.title}</h2>
+                        <h2 className={`site-heading title ${activePanel.slug}`}>
+                            {activePanel.title}
+                            <span>{activePanel.icon}</span>
+                        </h2>
                         <p className='description site-p'>
                             {activePanel.description}
                         </p>

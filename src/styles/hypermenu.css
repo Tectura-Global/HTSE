@@ -46,13 +46,19 @@
     }
 
     #hypermenu-sidebar .title {
-        font-size: 2vw;
-        color: #1E92A3;
+        gap: 2rem;
+        font-size: 1.5vw;
         margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     #hypermenu-sidebar .site-heading span {
-        color: #3a7dce;
+        color: inherit;
+        font-size: 4vw;
+        display: grid;
+        place-items: center;
         font-family: inherit;
     }
 

@@ -1,4 +1,4 @@
-import dataPoints from '@/data/dataPoint';
+import dataPoints from '@/data/dataPoint.tsx';
 import Hypermenu from '@/components/Hypermenu';
 
 function Services() {
