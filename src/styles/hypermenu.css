@@ -38,6 +38,22 @@
         color: #ffffff;
     }
 
+    #hypermenu-sidebar .header .description.facility-protection-safety {
+        color: #a4191a;
+    }
+
+    #hypermenu-sidebar .header .description.intelligent-building-operations {
+        color: #cf4900;
+    }
+
+    #hypermenu-sidebar .header .description.health-regulatory-standards {
+        color: #017267;
+    }
+
+    #hypermenu-sidebar .header .description.care-journey-excellence {
+        color: #135aac;
+    }
+
     #hypermenu-list {
         gap: 1rem;
         display: flex;
@@ -78,14 +94,7 @@
         border: 1px solid #1E92A3;
         transition: .3s ease color;
         transition: .3s ease background-color;
-    }
-
-    .hypermenu-list-item:hover {
-        background-color: #1E92A3;
-    }
-
-    .hypermenu-list-item:hover .site-heading {
-        color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
     #hypermenu-panels {
@@ -135,6 +144,22 @@
         background-color: #135aac;
     }
 
+    .hypermenu-list-item.facility-protection-safety .site-p {
+        color: #a4191a;
+    }
+
+    .hypermenu-list-item.intelligent-building-operations .site-p {
+        color: #cf4900;
+    }
+
+    .hypermenu-list-item.health-regulatory-standards .site-p {
+        color: #017267;
+    }
+
+    .hypermenu-list-item.care-journey-excellence .site-p {
+        color: #135aac;
+    }
+
     .hypermenu-panel .site-p {
         font-size: .9rem;
         color: #ffffff;
@@ -179,6 +204,7 @@
     }
 
     .hypermenu-list-item.facility-protection-safety:hover {
+        color: #ffffff;
         background-color: #a4191a;
     }
 
@@ -195,6 +221,7 @@
     }
 
     .hypermenu-list-item.intelligent-building-operations:hover {
+        color: #ffffff;
         background-color: #cf4900;
     }
 
@@ -211,6 +238,7 @@
     }
 
     .hypermenu-list-item.health-regulatory-standards:hover {
+        color: #ffffff;
         background-color: #017267;
     }
 
@@ -228,6 +256,10 @@
 
     .hypermenu-list-item.care-journey-excellence:hover {
         background-color: #135aac;
+    }
+
+    .hypermenu-list-item:hover .site-p {
+        color: #ffffff !important;
     }
     
     /* .hypermenu-panel .site-heading.care-journey-excellence {

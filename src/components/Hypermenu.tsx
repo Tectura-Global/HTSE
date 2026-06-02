@@ -26,7 +26,7 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
                             {activePanel.title}
                             <span>{activePanel.icon}</span>
                         </h2>
-                        <p className='description site-p'>
+                        <p className={`description site-p ${activePanel.slug}`}>
                             {activePanel.description}
                         </p>
                     </div>

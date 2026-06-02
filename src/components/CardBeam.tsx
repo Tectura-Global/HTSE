@@ -18,13 +18,13 @@ function CardBeam() {
             {/* Left column */}
             <div className="beam-col left">
                 <div ref={n1} className="beam-node">
-                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
                 </div>
                 <div ref={n2} className="beam-node">
-                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
                 </div>
                 <div ref={n3} className="beam-node">
-                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
                 </div>
             </div>
 
@@ -36,14 +36,14 @@ function CardBeam() {
 
             {/* Right column */}
             <div className="beam-col right">
-                <div ref={n4} className="beam-node">
-                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                <div ref={n4} className="beam-node">    
+                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
                 </div>
                 <div ref={n5} className="beam-node">
-                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
                 </div>
                 <div ref={n6} className="beam-node">
-                    <ShineBorder borderWidth={4} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
                 </div>
             </div>
 

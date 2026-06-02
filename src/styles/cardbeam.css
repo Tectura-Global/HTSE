@@ -4,6 +4,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    margin: auto;
+    padding: 2rem;
     justify-content: space-between;
     overflow: hidden;
 }
@@ -21,7 +23,8 @@
     z-index: 99;
     border-radius: 50%;
     position: relative;
-    background: #ffffff
+    background-color: #ffffff;
+    box-shadow: #0c7fc257 0px 4px 12px;
 }
 
 .beam-node.center {
@@ -29,8 +32,9 @@
     height: 25rem;
     z-index: 99;
     border-radius: 50%;
-    background-color: #fff;
     position: relative;
+    background-color: #2e3192;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .beam-node.center img {

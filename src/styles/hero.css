@@ -18,20 +18,20 @@
         z-index: 5;
         width: 70%;
         font-size: 4vw;
-        color: #ffffff;
+        color: #0c7ec2;
         text-align: center;
         pointer-events: none;
     }
     
     #hero .site-heading span {
-        color: #009a83;
+        color: #2e3192;
         pointer-events: none;
     }
     
     #hero .site-p {
         z-index: 5;
         font-size: 1vw;
-        color: #ffffff;
+        color: #0c7ec2;
         pointer-events: none;
     }
 }

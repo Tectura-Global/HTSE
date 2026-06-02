@@ -1,0 +1,70 @@
+#pillars {
+    gap: 5rem;
+    height: 150vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#pillars .site-heading.section-title {
+    /* color: #ffffff; */
+    font-size: 7vw;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#2e3192 30%, #33333300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#pillars .content {
+    flex: 1;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#pillars .section-description {
+    top: 50%;
+    left: 50%;
+    width: 40rem;
+    height: 40rem;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #2e3192;
+    transform: translate(-50%, -50%);
+}
+
+#pillars .section-description .site-p {
+    width: 50%;
+    font-size: 1rem;
+}
+
+#pillars .orbit-wrapper {
+    width: 60%;
+    position: relative;
+}
+
+#pillars .orbit-object {
+    top: 50%;
+    left: 40%;
+    position: absolute;
+}
+
+#pillars .orbit-node {
+    width: 15rem;
+    height: 4rem;
+    padding: .75rem .5rem;
+    border-radius: .25rem;
+    border: 1px solid #2e3192;
+    background-color: #2e319220;
+}
+
+#pillars .orbit-node span {
+    font-size: .8rem;
+}

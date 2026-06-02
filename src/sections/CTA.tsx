@@ -7,22 +7,26 @@ import { LuCpu } from "react-icons/lu";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { TextAnimate } from "@/components/ui/text-animate"
+import { Marquee } from '@/components/ui/marquee';
 
 
 const cards = [
     {
+        id: 1,
         icon: <LuBrainCircuit className='cta-card-icon' />,
         title: "Intelligent Building Solutions",
         text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum tempore, aliquam necessitatibus vel velit voluptates!"
     },
     {
-        icon: <LuCpu className='cta-card-icon' />,
-        title: "Procurement, Installation & support",
+        id: 2,
+        icon: <LuBrainCircuit className='cta-card-icon' />,
+        title: "Integrated Ecosystem",
         text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum tempore, aliquam necessitatibus vel velit voluptates!"
     },
     {
-        icon: <LuBrainCircuit className='cta-card-icon' />,
-        title: "Integrated Ecosystem",
+        id: 3,
+        icon: <LuCpu className='cta-card-icon' />,
+        title: "Procurement, Installation & support",
         text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum tempore, aliquam necessitatibus vel velit voluptates!"
     },
 ]
@@ -38,7 +42,7 @@ function CTA () {
         <section id="cta">
             <header ref={headerRef}>
                 <motion.h1
-                    className="site-heading"
+                    className="site-heading section-title"
                     initial={{ opacity: 0, y: 60 }}
                     animate={headerInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -80,23 +84,23 @@ function CTA () {
                 )}
             </div>
 
-            <div className="cta-extension">
-                    {cards.map((card, i) => (
-                        <div key={i} className="cta-card">
-                            {card.icon}
+            <Marquee pauseOnHover className="cta-extension">
+                {cards.map((card, i) => (
+                    <div key={i} className={`cta-card`}>
+                        {card.icon}
 
-                            <div className="cta-content">
-                                <h3 className="cta-title site-heading">
-                                {card.title}
-                                </h3>
+                        <div className="cta-content">
+                            <h3 className={`cta-title site-heading ${card.id === 3 ? 'pis' : ''}`}>
+                            {card.title}
+                            </h3>
 
-                                <p className="cta-text site-p">
-                                {card.text}
-                                </p>
-                            </div>
+                            <p className="cta-text site-p">
+                            {card.text}
+                            </p>
                         </div>
-                    ))}
-            </div>
+                    </div>
+                ))}
+            </Marquee>
         </section>
     )
 }

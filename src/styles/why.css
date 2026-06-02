@@ -12,14 +12,14 @@
         text-align: center;
         margin-bottom: 3rem;
         font-weight: 700;
-        background: -webkit-linear-gradient(#eee 30%, #33333300);
+        background: -webkit-linear-gradient(#2e3192 30%, #33333300);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     #why .site-p.section-description {
         width: 50%;
-        color: #ffffff;
+        color: #000000;
         text-align: center;
         margin: 0 auto;
         margin-bottom: 8rem;

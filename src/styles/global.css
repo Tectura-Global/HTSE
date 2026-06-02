@@ -9,20 +9,13 @@
     }
 
     body {
-        background-color: #000c1a;
+        /* background-color: #000c1a; */
     }
 
     main {
         gap: 10rem;
         display: flex;
         flex-direction: column;
-        background-attachment: fixed;
-        background-image: radial-gradient(
-            circle at 1px 1px,
-            rgba(24, 88, 161, 0.5) 1px,
-            transparent 0
-        );
-        background-size: 24px 24px;
     }
 }
 
