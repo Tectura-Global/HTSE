@@ -77,3 +77,13 @@
 #pillars .orbit-node span {
     font-size: .8rem;
 }
+
+@media screen and (min-width: 1600px) {
+    #pillars .content {
+        padding: 4rem 0;
+    }
+
+    #pillars .header .site-p {
+        font-size: 1.2rem;
+    }
+}

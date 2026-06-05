@@ -18,8 +18,8 @@
 }
 
 .beam-node {
-    width: 12rem;
-    height: 12rem;
+    width: 15rem;
+    height: 15rem;
     z-index: 99;
     display: grid;
     place-items: center;
@@ -35,13 +35,14 @@
 }
 
 .beam-node .site-p {
+    width: 70%;
     text-align: center;
-    font-size: .8rem;
+    font-size: .9rem;
 }
 
 .beam-node.center {
-    width: 25rem;
-    height: 25rem;
+    width: 30rem;
+    height: 30rem;
     z-index: 99;
     border-radius: 50%;
     position: relative;

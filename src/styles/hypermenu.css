@@ -94,6 +94,7 @@
         border: 1px solid #1E92A3;
         transition: .3s ease color;
         transition: .3s ease background-color;
+        background-color: #ffffff;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
@@ -262,7 +263,21 @@
         color: #ffffff !important;
     }
     
-    /* .hypermenu-panel .site-heading.care-journey-excellence {
-        color: #135aac;
-    } */
+    @media screen and (min-width: 1600px) {    
+        #hypermenu-sidebar .description {
+            font-size: 1.2rem;
+        } 
+
+        #hypermenu-sidebar .title {
+            font-size: 2rem;
+        }
+
+        .hypermenu-panel .site-p {
+            font-size: 1rem;
+        }
+        
+        #why .site-p.section-description {
+            margin-bottom: 0 !important;
+        }
+    }
 }
