@@ -49,6 +49,7 @@
         align-items: center;
         border-radius: .25rem;
         border: 1px solid #2e3192;
+        background-color: #ffffff;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
@@ -109,12 +110,16 @@
     }
     
     .cta-card:hover {
-        background-color: #1E92A3;
+        background-color: #2e3192;
     }
     
     .cta-card:hover .cta-card-icon {
         opacity: 0;
         transform: translateY(-150%);
+    }
+    
+    .cta-card:hover .cta-title {
+        color: #ffffff;
     }
 
     .cta-content {

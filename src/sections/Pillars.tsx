@@ -1,6 +1,6 @@
 import '../styles/pillars.css'
+import BorderGlow from '@/components/BorderGlow';
 import { TextAnimate } from "@/components/ui/text-animate"
-import { OrbitingCircles } from "@/components/ui/orbiting-circles"
 
 function Pillars() {
 
@@ -10,33 +10,72 @@ function Pillars() {
                 <TextAnimate animation='blurInUp' by='word' className='site-heading section-title'>
                     Our Core Pillars
                 </TextAnimate>
+                <TextAnimate animation='blurInUp' by='line' className='site-p'>
+                    Tectura Global's integration layer connects all building and healthcare systems into a single ecosystem. Thus enabling facilities managers and clinical
+                    leadership to respond faster, operate smarter, and reduce costs.
+                </TextAnimate>
             </div>
             <div className="content">
-                <div className="orbit-wrapper">
-                    <div className="orbit-object">
-                        <OrbitingCircles radius={400} className='orbit-node'>
-                            <span className='site-p'>
-                                End to End Needs Analysis & Customization
-                            </span>
-                            <span className='site-p'>
-                                Compliance & Regulatory Standards
-                            </span>
-                            <span className='site-p'>
-                                Intelligent Building Operations
-
-                            </span>
-                            <span className='site-p'>
-                                Facility Protection & Safety
-                            </span>
-                        </OrbitingCircles>
+                <BorderGlow
+                    edgeSensitivity={30}
+                    glowColor="40 80 80"
+                    backgroundColor="#2e3192"
+                    borderRadius={28}
+                    glowRadius={67}
+                    glowIntensity={2}
+                    coneSpread={25}
+                    animated
+                    colors={['#2e3192', '#38bdf8']}
+                    >
+                    <div style={{ padding: '2em' }}>
+                        <h2 className="site-heading">End to End Needs Analysis & Customization</h2>
                     </div>
-                </div>
-                <div className="section-description">
-                    <TextAnimate animation='blurInUp' by='line' className='site-p'>
-                        Tectura Global's integration layer connects all building and healthcare systems into a single ecosystem. Thus enabling facilities managers and clinical
-                        leadership to respond faster, operate smarter, and reduce costs.
-                    </TextAnimate>
-                </div>
+                </BorderGlow>
+                <BorderGlow
+                    edgeSensitivity={30}
+                    glowColor="40 80 80"
+                    backgroundColor="#2e3192"
+                    borderRadius={28}
+                    glowRadius={67}
+                    glowIntensity={2}
+                    coneSpread={25}
+                    animated
+                    colors={['#2e3192', '#38bdf8']}
+                    >
+                    <div style={{ padding: '2em' }}>
+                        <h2 className="site-heading">Compliance & Regulatory Standards</h2>
+                    </div>
+                </BorderGlow>
+                <BorderGlow
+                    edgeSensitivity={30}
+                    glowColor="40 80 80"
+                    backgroundColor="#2e3192"
+                    borderRadius={28}
+                    glowRadius={67}
+                    glowIntensity={2}
+                    coneSpread={25}
+                    animated
+                    colors={['#2e3192', '#38bdf8']}
+                    >
+                    <div style={{ padding: '2em' }}>
+                        <h2 className="site-heading">Intelligent Building Operations</h2>
+                    </div>
+                </BorderGlow>
+                <BorderGlow
+                    edgeSensitivity={30}
+                    glowColor="40 80 80"
+                    backgroundColor="#2e3192"
+                    borderRadius={28}
+                    glowRadius={67}
+                    glowIntensity={2}
+                    coneSpread={25}
+                    animated
+                    colors={['#2e3192', '#38bdf8']}
+                    >
+                    <div style={{ padding: '2em' }}>
+                        <h2 className="site-heading">Facility Protection & Safety</h2>
+                    </div>
+                </BorderGlow>
             </div>
         </section>
     )

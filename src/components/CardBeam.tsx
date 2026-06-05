@@ -18,13 +18,13 @@ function CardBeam() {
             {/* Left column */}
             <div className="beam-col left">
                 <div ref={n1} className="beam-node">
-                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
+                    <p className="site-p">Data driven Decisions</p>
                 </div>
                 <div ref={n2} className="beam-node">
-                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
+                    <p className="site-p">AI & Intelligent Automation</p>
                 </div>
                 <div ref={n3} className="beam-node">
-                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
+                    <p className="site-p">Smart Building & Sustainability Solutions</p>
                 </div>
             </div>
 
@@ -36,14 +36,14 @@ function CardBeam() {
 
             {/* Right column */}
             <div className="beam-col right">
-                <div ref={n4} className="beam-node">    
-                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
+                <div ref={n4} className="beam-node">
+                    <p className="site-p">End-to-End Delivery</p>
                 </div>
                 <div ref={n5} className="beam-node">
-                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
+                    <p className="site-p">Vendor Agnostic Integration</p>
                 </div>
                 <div ref={n6} className="beam-node">
-                    {/* <ShineBorder borderWidth={4} shineColor={'#009a83'} /> */}
+                    <p className="site-p">Rapid Response Infrastructure Deployment</p>
                 </div>
             </div>
 

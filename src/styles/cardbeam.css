@@ -21,10 +21,22 @@
     width: 12rem;
     height: 12rem;
     z-index: 99;
+    display: grid;
+    place-items: center;
     border-radius: 50%;
     position: relative;
     background-color: #ffffff;
     box-shadow: #0c7fc257 0px 4px 12px;
+    transition: .3s ease transform;
+}
+
+.beam-node:hover {
+    transform: scale(1.2);
+}
+
+.beam-node .site-p {
+    text-align: center;
+    font-size: .8rem;
 }
 
 .beam-node.center {

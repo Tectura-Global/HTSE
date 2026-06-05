@@ -1,16 +1,21 @@
 #pillars {
     gap: 5rem;
-    height: 150vh;
+    height: 100vh;
     padding: 2rem;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
+#pillars .header {
+    width: 40%;
+    display: grid;
+    place-content: center;
+}
 
 #pillars .site-heading.section-title {
     /* color: #ffffff; */
-    font-size: 7vw;
-    text-align: center;
+    font-size: 6vw;
+    text-align: left;
     margin-bottom: 3rem;
     font-weight: 700;
     background: -webkit-linear-gradient(#2e3192 30%, #33333300);
@@ -20,23 +25,27 @@
 
 #pillars .content {
     flex: 1;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    gap: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+#pillars .content .site-heading {
+    color: #ffffff;
 }
 
 #pillars .section-description {
     top: 50%;
     left: 50%;
-    width: 40rem;
-    height: 40rem;
+    width: 35rem;
+    height: 35rem;
     display: grid;
     place-items: center;
     position: absolute;
     text-align: center;
     border-radius: 50%;
-    border: 2px solid #2e3192;
+    /* border: 2px solid #2e3192; */
     transform: translate(-50%, -50%);
 }
 
@@ -51,16 +60,16 @@
 }
 
 #pillars .orbit-object {
-    top: 50%;
-    left: 40%;
+    top: 40%;
+    left: 45%;
     position: absolute;
 }
 
 #pillars .orbit-node {
-    width: 15rem;
+    width: 4rem;
     height: 4rem;
     padding: .75rem .5rem;
-    border-radius: .25rem;
+    border-radius: 50%;
     border: 1px solid #2e3192;
     background-color: #2e319220;
 }
