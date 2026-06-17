@@ -1,43 +1,59 @@
-import "@/styles/hypermenu.css"
-import { useState } from 'react';
+import '../styles/PIMS.css'
+import "@/styles/hypermenu-pims.css"
+
+import { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 
+import PIMSData from '@/data/PIMSdata'
+
 interface Point {
-    heading: string;
-    body: string;
-}
-interface DataPoint {
-    id: number;
-    title: string;
-    slug: string;
-    icon: React.ReactNode;
-    description: string;
-    points: Point[];
+    heading: string
+    body: string
 }
 
-function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
-    const [activePanel, setActivePanel] = useState(dataPoints[0]);
+interface DataPoint {
+    id: number
+    title: string
+    slug: string
+    icon: React.ReactNode
+    description: string
+    points: Point[]
+}
+
+function PIMS() {
+    const dataPoints: DataPoint[] = PIMSData
+
+    const [activePanel, setActivePanel] = useState<DataPoint>(
+        dataPoints[0]
+    )
+
     return (
         <section id="hypermenu">
             <div className="hypermenu-wrapper">
                 <aside id="hypermenu-sidebar">
-                    <div className='header'>
+                    <div className="header">
                         <h2 className={`site-heading title ${activePanel.slug}`}>
                             {activePanel.title}
                             <span>{activePanel.icon}</span>
                         </h2>
+
                         <p className={`description site-p ${activePanel.slug}`}>
                             {activePanel.description}
                         </p>
                     </div>
+
                     <ul id="hypermenu-list">
                         {dataPoints.map((dataPoint) => (
                             <li
                                 key={dataPoint.id}
-                                className={`hypermenu-list-item ${dataPoint.slug} ${activePanel.id === dataPoint.id ? 'active' : ''}`}
+                                className={`hypermenu-list-item ${dataPoint.slug} ${
+                                    activePanel.id === dataPoint.id ? "active" : ""
+                                }`}
                                 onMouseEnter={() => setActivePanel(dataPoint)}
                             >
-                                <p className="site-p">{dataPoint.title}</p>
+                                <p className="site-p">
+                                    {dataPoint.title}
+                                </p>
                             </li>
                         ))}
                     </ul>
@@ -50,7 +66,10 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
                         initial={{ opacity: 0, scale: 0.97 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.97 }}
-                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        transition={{
+                            duration: 0.25,
+                            ease: "easeOut",
+                        }}
                     >
                         {activePanel.points.map((point, index) => (
                             <motion.div
@@ -59,21 +78,32 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
                                 className={`hypermenu-panel ${activePanel.slug}`}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
+                                transition={{
+                                    duration: 0.3,
+                                    delay: index * 0.05,
+                                    ease: "easeOut",
+                                }}
                             >
                                 <motion.h3
-                                    className={`site-heading`}
+                                    className={`site-heading ${activePanel.slug}`}
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3, delay: index * 0.05 + 0.1 }}
+                                    transition={{
+                                        duration: 0.3,
+                                        delay: index * 0.05 + 0.1,
+                                    }}
                                 >
                                     {point.heading}
                                 </motion.h3>
+
                                 <motion.p
                                     className="site-p"
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3, delay: index * 0.05 + 0.15 }}
+                                    transition={{
+                                        duration: 0.3,
+                                        delay: index * 0.05 + 0.15,
+                                    }}
                                 >
                                     {point.body}
                                 </motion.p>
@@ -86,4 +116,4 @@ function Hypermenu({ dataPoints }: { dataPoints: DataPoint[] }) {
     )
 }
 
-export default Hypermenu;
+export default PIMS

@@ -9,7 +9,7 @@
     }
 
     #root {
-        background-image: radial-gradient(circle, #135aac 1px, transparent 1px);
+        background-image: radial-gradient(circle, #135aac40 1px, transparent 1px);
         background-size: 24px 24px;
     }
 
