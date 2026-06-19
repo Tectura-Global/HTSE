@@ -98,35 +98,25 @@
         /* background-color: #00000010; */
     }
 
-    .hypermenu-panel {
+    #hypermenu-panels.PIMS .hypermenu-panel {
         display: flex;
         padding: 1rem;
+        
         /* From https://css.glass */
+        background: rgba(131, 183, 243, 0.2);
+        border-radius: .25rem;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
         flex-direction: column;
         justify-content: space-between;
-        /* background: #ffffff; */
-        border-radius: .25rem;
     }
 
     .hypermenu-panel .site-heading {
         font-size: 1.5vw;
         color: #ffffff;
-    }
-
-    .hypermenu-panel.facility-protection-safety {
-        background-color: #a4191a;
-    }
-
-    .hypermenu-panel.intelligent-building-operations {
-        background-color: #cf4900;
-    }
-
-    .hypermenu-panel.health-regulatory-standards {
-        background-color: #017267;
-    }
-
-    .hypermenu-panel.care-journey-excellence {
-        background-color: #135aac;
     }
 
     .hypermenu-list-item .site-p {
@@ -142,7 +132,7 @@
         grid-area: 1 / 1 / 4 / 3;
     }
 
-    #hypermenu-panels .site-heading {
+    #hypermenu-panels.PIMS      .site-heading {
         margin: 0;
         font-size: 1.5vw;
         color: #135aac;

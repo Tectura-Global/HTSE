@@ -6,6 +6,7 @@ import Why from './sections/Why'
 import { useEffect } from 'react'
 import Pillars from './sections/Pillars'
 import PIMS from './sections/PIMS'
+import IntEco from './sections/IntEco'
 
 export function App() {
 
@@ -17,6 +18,7 @@ export function App() {
         <Hero />
         <CTA />
         <Pillars />
+        <IntEco />
         <PIMS />
         <Services />
         {/* <SmartBuilding /> */}

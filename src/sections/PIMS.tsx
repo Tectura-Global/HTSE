@@ -62,6 +62,7 @@ function PIMS() {
                 <AnimatePresence mode="wait">
                     <motion.div
                         id="hypermenu-panels"
+                        className='PIMS'
                         key={activePanel.id}
                         initial={{ opacity: 0, scale: 0.97 }}
                         animate={{ opacity: 1, scale: 1 }}
