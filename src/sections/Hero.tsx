@@ -32,7 +32,7 @@ export default function Hero() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    Healthcare Technology<br></br>
+                    Integrated Technology<br></br>
                     <span>Ecosystem Solutions</span>
                 </motion.h1>
                 <p className="site-p">

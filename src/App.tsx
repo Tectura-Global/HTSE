@@ -1,3 +1,4 @@
+import './index.css'
 import './styles/global.css'
 import CTA from './sections/CTA'
 import Hero from "./sections/Hero"
@@ -18,10 +19,10 @@ export function App() {
         <Hero />
         <CTA />
         <Pillars />
-        <IntEco />
-        <PIMS />
         <Services />
+        <IntEco />
         {/* <SmartBuilding /> */}
+        <PIMS />
         <Why />
     </main>
   )

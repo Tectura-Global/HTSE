@@ -47,8 +47,8 @@ const dataPoints = [
     ],
   },
   { id: 4,
-    title: "Care Journey Excellence",
-    slug: "care-journey-excellence",
+    title: "Customized Customer Journey",
+    slug: "customized-customer-journey",
     icon: <FaHeartbeat />,
     description: "Enhancing every touchpoint of the patient journey: from arrival to discharge and everything in between.",
     points: [

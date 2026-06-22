@@ -7,9 +7,9 @@ function Pillars() {
     return (
         <section id="pillars">
             <div className="header">
-                <TextAnimate animation='blurInUp' by='word' className='site-heading section-title'>
+                <h1 className='site-heading section-title'>
                     Our Core Pillars
-                </TextAnimate>
+                </h1>
                 <TextAnimate animation='blurInUp' by='line' className='site-p'>
                     Tectura Global's integration layer connects all building and healthcare systems into a single ecosystem. Thus enabling facilities managers and clinical
                     leadership to respond faster, operate smarter, and reduce costs.

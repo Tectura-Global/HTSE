@@ -7,7 +7,7 @@
 
         health-regulatory-standards: --#017267;
 
-        care-journey-excellence: --#135aac;
+        customized-customer-journey: --#135aac;
     }
 
     #hypermenu {
@@ -50,7 +50,7 @@
         color: #017267;
     }
 
-    #hypermenu-sidebar .header .description.care-journey-excellence {
+    #hypermenu-sidebar .header .description.customized-customer-journey {
         color: #135aac;
     }
 
@@ -141,7 +141,7 @@
         background-color: #017267;
     }
 
-    .hypermenu-panel.care-journey-excellence {
+    .hypermenu-panel.customized-customer-journey {
         background-color: #135aac;
     }
 
@@ -157,7 +157,7 @@
         color: #017267;
     }
 
-    .hypermenu-list-item.care-journey-excellence .site-p {
+    .hypermenu-list-item.customized-customer-journey .site-p {
         color: #135aac;
     }
 
@@ -247,15 +247,15 @@
         color: #017267;
     } */
 
-    #hypermenu-sidebar .title.care-journey-excellence {
+    #hypermenu-sidebar .title.customized-customer-journey {
         color: #135aac;
     }
 
-    .hypermenu-list-item.care-journey-excellence {
+    .hypermenu-list-item.customized-customer-journey {
         border: 1px solid #135aac;
     }
 
-    .hypermenu-list-item.care-journey-excellence:hover {
+    .hypermenu-list-item.customized-customer-journey:hover {
         background-color: #135aac;
     }
 
