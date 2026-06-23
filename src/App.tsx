@@ -20,9 +20,9 @@ export function App() {
         <Hero />
         <CTA />
         <Pillars />
+        <IntEco />
         <IBO />
         <Services />
-        <IntEco />
         {/* <SmartBuilding /> */}
         <PIMS />
         <Why />

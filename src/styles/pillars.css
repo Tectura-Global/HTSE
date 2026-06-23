@@ -1,9 +1,14 @@
 #pillars {
     gap: 5rem;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2rem;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
+}
+
+.pillars-container {
+    display: flex;
+    min-height: 80vh;
 }
 
 #pillars .header {
