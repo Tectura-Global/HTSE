@@ -33,7 +33,6 @@ function CTA () {
     const listRef = useRef(null)
     const headerRef = useRef(null)
 
-    const isInView = useInView(listRef, { once: true, margin: "-200px" })
     const headerInView = useInView(headerRef, { once: true, margin: "-200px" })
 
     return (
