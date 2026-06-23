@@ -1,28 +1,22 @@
 @layer components {
 
-    :root {
-        facility-protection-safety: --#a4191a;
+    /* =========================
+       BASE SCOPE
+    ========================== */
 
-        intelligent-building-operations: --#cf4900;
-
-        health-regulatory-standards: --#017267;
-
-        care-journey-excellence: --#135aac;
-    }
-
-    #hypermenu {
+    #hypermenu.PIMS {
         height: 100vh;
         padding: 2rem;
     }
 
-    .hypermenu-wrapper {
+    #hypermenu.PIMS .hypermenu-wrapper {
         gap: 2rem;
         height: 100%;
         display: flex;
         justify-content: space-between;
     }
 
-    #hypermenu-sidebar {
+    #hypermenu.PIMS #hypermenu-sidebar {
         width: 30%;
         display: flex;
         flex-shrink: 0;
@@ -30,157 +24,215 @@
         justify-content: space-between;
     }
 
-    #hypermenu-sidebar .header {
-        text-align: left;
-    }
-
-    #hypermenu-sidebar .header .description {
-        color: #000000;
-    }
-
-    #hypermenu-list {
+    #hypermenu.PIMS #hypermenu-list {
         gap: 1rem;
         display: flex;
         list-style: none;
         flex-direction: column;
     }
 
-    #hypermenu-sidebar .title {
+    /* =========================
+       SIDEBAR TITLE (ACTIVE COLOR DRIVEN)
+    ========================== */
+
+    #hypermenu.PIMS #hypermenu-sidebar .title {
         gap: 2rem;
         font-size: 1.5vw;
         margin-bottom: 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        background: transparent;
     }
 
-    #hypermenu-sidebar .site-heading span {
-        color: inherit;
-        font-size: 4vw;
-        display: grid;
-        place-items: center;
-        font-family: inherit;
+    /* ACTIVE TITLE COLORS (slug-driven via class) */
+
+    #hypermenu.PIMS .medical-equipment-procurement.title {
+        color: #a4191a;
     }
 
-    #hypermenu-sidebar .description {
-        color: #3a7dce;
-        font-size: .9rem;
-        margin-bottom: 2rem;
+    #hypermenu.PIMS .installation-and-commissioning.title {
+        color: #a4191a;
     }
 
-    .hypermenu-list-item {
+    #hypermenu.PIMS .asset-tracking-and-rtls.title {
+        color: #cf4900;
+    }
+
+    #hypermenu.PIMS .biomedical-support-services.title {
+        color: #cf4900;
+    }
+
+    #hypermenu.PIMS .digital-health-integration.title {
+        color: #017267;
+    }
+
+    #hypermenu.PIMS .field-hospitals-and-rapid-deployment.title {
+        color: #017267;
+    }
+
+    #hypermenu.PIMS .disaster-and-pandemic-response.title {
+        color: #135aac;
+    }
+
+    #hypermenu.PIMS .emergency-communications-and-command-centres.title {
+        color: #135aac;
+    }
+
+    /* =========================
+       LIST ITEMS (CORRECT DEFAULT STATE)
+    ========================== */
+
+    #hypermenu.PIMS .hypermenu-list-item {
         display: flex;
         padding: 1rem;
         font-size: 1vw;
         cursor: pointer;
         align-items: center;
-        color: #fff;
-        border: 1px solid #1E92A3;
-        transition: .3s ease color;
-        transition: .3s ease background-color;
+
         background-color: #ffffff;
+        color: #000;
+
+        border: 1px solid #000; /* fallback, overridden below */
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+        transition: background-color .25s ease, color .25s ease, border-color .25s ease;
     }
 
-    #hypermenu-panels {
+    #hypermenu.PIMS .hypermenu-list-item .site-p {
+        color: #000;
+    }
+
+    /* =========================
+       LIST ITEM BORDER COLORS (DEFAULT STATE)
+    ========================== */
+
+    #hypermenu.PIMS .medical-equipment-procurement,
+    #hypermenu.PIMS .installation-and-commissioning {
+        border-color: #a4191a;
+    }
+
+    #hypermenu.PIMS .asset-tracking-and-rtls,
+    #hypermenu.PIMS .biomedical-support-services {
+        border-color: #cf4900;
+    }
+
+    #hypermenu.PIMS .digital-health-integration,
+    #hypermenu.PIMS .field-hospitals-and-rapid-deployment {
+        border-color: #017267;
+    }
+
+    #hypermenu.PIMS .disaster-and-pandemic-response,
+    #hypermenu.PIMS .emergency-communications-and-command-centres {
+        border-color: #135aac;
+    }
+
+    /* =========================
+       LIST ITEM HOVER (COLOR APPEARS HERE)
+    ========================== */
+
+    #hypermenu.PIMS .medical-equipment-procurement:hover,
+    #hypermenu.PIMS .installation-and-commissioning:hover {
+        background-color: #a4191a;
+        border-color: #a4191a;
+    }
+
+    #hypermenu.PIMS .asset-tracking-and-rtls:hover,
+    #hypermenu.PIMS .biomedical-support-services:hover {
+        background-color: #cf4900;
+        border-color: #cf4900;
+    }
+
+    #hypermenu.PIMS .digital-health-integration:hover,
+    #hypermenu.PIMS .field-hospitals-and-rapid-deployment:hover {
+        background-color: #017267;
+        border-color: #017267;
+    }
+
+    #hypermenu.PIMS .disaster-and-pandemic-response:hover,
+    #hypermenu.PIMS .emergency-communications-and-command-centres:hover {
+        background-color: #135aac;
+        border-color: #135aac;
+    }
+
+    /* TEXT SWITCH ON HOVER */
+
+    #hypermenu.PIMS .hypermenu-list-item:hover .site-p {
+        color: #ffffff !important;
+    }
+
+    /* =========================
+       PANELS (UNCHANGED, CORRECT)
+    ========================== */
+
+    #hypermenu.PIMS .hypermenu-panel {
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+
+        border-radius: .25rem;
+
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+    }
+
+    #hypermenu.PIMS .hypermenu-panel .site-heading {
+        font-size: 1.5vw;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    #hypermenu.PIMS .hypermenu-panel .site-p {
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* PANEL COLORS */
+
+    #hypermenu.PIMS .medical-equipment-procurement,
+    #hypermenu.PIMS .installation-and-commissioning {
+        background-color: #a4191a;
+    }
+
+    #hypermenu.PIMS .asset-tracking-and-rtls,
+    #hypermenu.PIMS .biomedical-support-services {
+        background-color: #cf4900;
+    }
+
+    #hypermenu.PIMS .digital-health-integration,
+    #hypermenu.PIMS .field-hospitals-and-rapid-deployment {
+        background-color: #017267;
+    }
+
+    #hypermenu.PIMS .disaster-and-pandemic-response,
+    #hypermenu.PIMS .emergency-communications-and-command-centres {
+        background-color: #135aac;
+    }
+
+    /* =========================
+       GRID
+    ========================== */
+
+    #hypermenu.PIMS #hypermenu-panels {
         gap: 1rem;
         flex-grow: 1;
         height: 100%;
         display: grid;
-        border-radius: .25rem;
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(6, 1fr);
-        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1) */
     }
 
-    #hypermenu-panels > .panel {
-        border-radius: var(--global-radius);
-        /* background-color: #00000010; */
-    }
+    #hypermenu.PIMS #panel-1 { grid-area: 1 / 1 / 4 / 3; }
+    #hypermenu.PIMS #panel-2 { grid-area: 1 / 3 / 4 / 5; }
+    #hypermenu.PIMS #panel-3 { grid-area: 1 / 5 / 4 / 7; }
+    #hypermenu.PIMS #panel-4 { grid-area: 4 / 1 / 7 / 3; }
+    #hypermenu.PIMS #panel-5 { grid-area: 4 / 3 / 7 / 5; }
+    #hypermenu.PIMS #panel-6 { grid-area: 4 / 5 / 7 / 7; }
 
-    #hypermenu-panels.PIMS .hypermenu-panel {
-        display: flex;
-        padding: 1rem;
-        
-        /* From https://css.glass */
-        background: rgba(131, 183, 243, 0.2);
-        border-radius: .25rem;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .hypermenu-panel .site-heading {
-        font-size: 1.5vw;
-        color: #ffffff;
-    }
-
-    .hypermenu-list-item .site-p {
-        color: #000000;
-    }
-
-    .hypermenu-panel .site-p {
-        font-size: .9rem;
-        color: #ffffff;
-    }
-
-    #panel-1 {
-        grid-area: 1 / 1 / 4 / 3;
-    }
-
-    #hypermenu-panels.PIMS      .site-heading {
-        margin: 0;
-        font-size: 1.5vw;
-        color: #135aac;
-    }
-
-    #panel-2 {
-        grid-area: 1 / 3 / 4 / 5;
-    }
-
-    #panel-3 {
-        grid-area: 1 / 5 / 4 / 7;
-    }
-
-    #panel-4 {
-        grid-area: 4 / 1 / 7 / 3;
-    }
-
-    #panel-5 {
-        grid-area: 4 / 3 / 7 / 5;
-    }
-
-    #panel-6 {
-        grid-area: 4 / 5 / 7 / 7;
-    }    
-
-    .hypermenu-list-item:hover {
-        background-color: #135aac;
-    }
-
-    .hypermenu-list-item:hover .site-p {
-        color: #ffffff !important;
-    }
-    
-    @media screen and (min-width: 1600px) {    
-        #hypermenu-sidebar .description {
-            font-size: 1.2rem;
-        } 
-
-        #hypermenu-sidebar .title {
-            font-size: 2rem;
-        }
-
-        .hypermenu-panel .site-p {
-            font-size: 1rem;
-        }
-        
-        #why .site-p.section-description {
-            margin-bottom: 0 !important;
-        }
-    }
 }

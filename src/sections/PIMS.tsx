@@ -28,7 +28,7 @@ function PIMS() {
     )
 
     return (
-        <section id="hypermenu">
+        <section id="hypermenu" className='PIMS'>
             <div className="hypermenu-wrapper">
                 <aside id="hypermenu-sidebar">
                     <div className="header">
