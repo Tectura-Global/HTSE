@@ -30,7 +30,6 @@ const cards = [
 ]
 
 function CTA () {
-    const listRef = useRef(null)
     const headerRef = useRef(null)
 
     const headerInView = useInView(headerRef, { once: true, margin: "-200px" })
