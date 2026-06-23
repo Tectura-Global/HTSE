@@ -57,33 +57,6 @@ function CTA () {
                 </TextAnimate>
             </header>
 
-            <div className="cta-list-wrapper" ref={listRef}>
-                {isInView && (
-                    <AnimatedList className='cta-list'>
-                        <div className="cta-list-item">
-                            <LuBadgeCheck className='cta-list-icon' />
-                            <p className="site-p">End-to-end system integration</p>
-                        </div>
-                        <div className="cta-list-item">
-                            <LuBadgeCheck className='cta-list-icon' />
-                            <p className="site-p">Healthcare-specific expertise</p>
-                        </div>
-                        <div className="cta-list-item">
-                            <LuBadgeCheck className='cta-list-icon' />
-                            <p className="site-p">Cybersecurity & compliance</p>
-                        </div>
-                        <div className="cta-list-item">
-                            <LuBadgeCheck className='cta-list-icon' />
-                            <p className="site-p">Real-time monitoring & analytics</p>
-                        </div>
-                        <div className="cta-list-item">
-                            <LuBadgeCheck className='cta-list-icon' />
-                            <p className="site-p">Scalable smart building platforms</p>
-                        </div>
-                    </AnimatedList>
-                )}
-            </div>
-
             <Marquee pauseOnHover className="cta-extension">
                 {cards.map((card, i) => (
                     <div key={i} className={`cta-card`}>

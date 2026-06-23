@@ -1,5 +1,6 @@
 import './index.css'
 import './styles/global.css'
+import IBO from './sections/IBO'
 import CTA from './sections/CTA'
 import Hero from "./sections/Hero"
 import Services from "./sections/Services"
@@ -19,6 +20,7 @@ export function App() {
         <Hero />
         <CTA />
         <Pillars />
+        <IBO />
         <Services />
         <IntEco />
         {/* <SmartBuilding /> */}
