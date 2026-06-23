@@ -9,7 +9,7 @@ function IBO() {
     return (
         <section id="why">
             <h1 className='site-heading section-title'>
-                Why Tectura Global?
+                Intelligent Building Operations
             </h1>
             <TextAnimate animation='blurInUp' by='word' className='site-p section-description'>
                 Tectura Global's integration layer connects all building and healthcare systems into a single ecosystem. Thus enabling facilities managers and clinical
