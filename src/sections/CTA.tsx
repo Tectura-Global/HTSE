@@ -1,8 +1,6 @@
 import '@/styles/CTA.css'
 import '@/index.css'
-import { AnimatedList } from "@/components/ui/animated-list"
 import { LuBrainCircuit } from "react-icons/lu";
-import { LuBadgeCheck } from "react-icons/lu";
 import { LuCpu } from "react-icons/lu";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
