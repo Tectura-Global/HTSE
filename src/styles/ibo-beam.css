@@ -1,11 +1,11 @@
-.ibo-container {
+#ibo-beam.ibo-container {
     position: relative;
     width: 100%;
     height: 900px;
     margin: 5rem auto;
 }
 
-.ibo-node {
+#ibo-beam .ibo-node {
     position: absolute;
 
     display: flex;
@@ -21,13 +21,15 @@
     color: white;
 }
 
-.ibo-node .site-p {
+#ibo-beam .ibo-node .site-p {
     margin: 0;
 }
 
-/* CENTER */
+/* =========================
+   CENTER
+========================= */
 
-.ibo-node.center {
+#ibo-beam .ibo-node.center {
     width: 320px;
     height: 320px;
 
@@ -41,75 +43,85 @@
     z-index: 2;
 }
 
-/* OUTER NODES */
+/* =========================
+   OUTER NODES
+========================= */
 
-.ibo-node:not(.center) {
+#ibo-beam .ibo-node:not(.center) {
     width: 15rem;
     height: 15rem;
 }
 
-.ibo-node.top,
-.ibo-node.top-left,
-.ibo-node.left,
-.ibo-node.bottom-left,
-.ibo-node.bottom-right {
+/* GROUP 1 */
+#ibo-beam .ibo-node.top,
+#ibo-beam .ibo-node.top-left,
+#ibo-beam .ibo-node.left,
+#ibo-beam .ibo-node.bottom-left,
+#ibo-beam .ibo-node.bottom-right {
     background: #49a7d8;
 }
 
-.ibo-node.top-right,
-.ibo-node.right,
-.ibo-node.bottom {
+/* GROUP 2 */
+#ibo-beam .ibo-node.top-right,
+#ibo-beam .ibo-node.right,
+#ibo-beam .ibo-node.bottom {
     background: #4b75d0;
 }
 
-/* POSITIONING */
+/* =========================
+   POSITIONING
+========================= */
 
-.top {
+#ibo-beam .top {
     left: 50%;
     top: 2%;
     transform: translateX(-50%);
 }
 
-.top-left {
+#ibo-beam .top-left {
     left: 8%;
     top: 20%;
     transform: translateY(-50%);
 }
 
-.left {
+#ibo-beam .left {
     left: 0%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.bottom-left {
+#ibo-beam .bottom-left {
     left: 8%;
     bottom: 5%;
 }
 
-.bottom {
+#ibo-beam .bottom {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
 }
 
-.bottom-right {
+#ibo-beam .bottom-right {
     right: 8%;
     bottom: 5%;
 }
 
-.top-right {
+#ibo-beam .top-right {
     right: 8%;
     top: 20%;
     transform: translateY(-50%);
 }
 
-.right {
+#ibo-beam .right {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.ibo-container svg {
+/* =========================
+   SVG
+========================= */
+
+#ibo-beam .ibo-container svg {
     overflow: visible;
 }

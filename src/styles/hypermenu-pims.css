@@ -235,4 +235,12 @@
     #hypermenu.PIMS #panel-5 { grid-area: 4 / 3 / 7 / 5; }
     #hypermenu.PIMS #panel-6 { grid-area: 4 / 5 / 7 / 7; }
 
+    #hypermenu.PIMS .hypermenu-list-item {
+        color: #000;
+        background-color: transparent !important;
+    }
+
+    #hypermenu.PIMS .hypermenu-list-item:hover .site-p {
+        color: #000 !important;
+    }
 }

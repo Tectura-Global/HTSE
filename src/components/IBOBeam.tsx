@@ -18,7 +18,7 @@ function IBOBeam() {
     const complianceRef = useRef<HTMLDivElement>(null)
 
     return (
-        <div ref={containerRef} className="ibo-container">
+        <div ref={containerRef} className="ibo-container" id="ibo-beam">
 
             <div ref={centerRef} className="ibo-node center">
                 <h2 className="site-heading">
