@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import Pillars from './sections/Pillars'
 import PIMS from './sections/PIMS'
 import IntEco from './sections/IntEco'
+import PIMSBeam from './components/PIMSBeam'
 
 export function App() {
 
@@ -24,6 +25,7 @@ export function App() {
         <IBO />
         <Services />
         {/* <SmartBuilding /> */}
+        <PIMSBeam />
         <PIMS />
         <Why />
     </main>
