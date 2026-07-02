@@ -1,0 +1,214 @@
+/* ==========================================================
+   DIO HYPERMENU
+========================================================== */
+
+#dio-hypermenu {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 6rem;
+    background: #07142c;
+}
+
+#dio-hypermenu .hypermenu-wrapper {
+    height: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: stretch;
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+#dio-hypermenu .hypermenu-sidebar {
+    width: 30%;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#dio-hypermenu .header {
+    margin-bottom: 2rem;
+}
+
+#dio-hypermenu .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+    color: white;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+#dio-hypermenu .title span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+}
+
+#dio-hypermenu .description {
+    color: rgba(255,255,255,.75);
+    line-height: 1.7;
+}
+
+#dio-hypermenu .hypermenu-list {
+    margin: 2rem 0 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
+    list-style: none;
+}
+
+#dio-hypermenu .hypermenu-list-item {
+    cursor: pointer;
+
+    padding: 1rem 1.25rem;
+
+    border-left: 4px solid transparent;
+    border-radius: .5rem;
+
+    background: rgba(255,255,255,.04);
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+#dio-hypermenu .hypermenu-list-item:hover {
+    background: rgba(0,154,131,.15);
+    border-left-color: rgba(0,179,155,.5);
+
+    transform: translateX(6px);
+}
+
+#dio-hypermenu .hypermenu-list-item.active {
+    background: rgba(0,154,131,.18);
+    border-left-color: #00b39b;
+}
+
+#dio-hypermenu .hypermenu-list-item p {
+    margin: 0;
+
+    color: white;
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+#dio-hypermenu .hypermenu-panels {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+
+    align-content: start;
+}
+
+#dio-hypermenu .hypermenu-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-height: 180px;
+
+    padding: 2rem;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+#dio-hypermenu .hypermenu-panel:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255,255,255,.075);
+    border-color: rgba(0,179,155,.45);
+
+    box-shadow: 0 12px 32px rgba(0,0,0,.2);
+}
+
+#dio-hypermenu .hypermenu-panel h3 {
+    margin-bottom: .85rem;
+
+    color: #00b39b;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+#dio-hypermenu .hypermenu-panel p {
+    color: rgba(255,255,255,.82);
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    #dio-hypermenu {
+        padding: 4rem;
+    }
+
+    #dio-hypermenu .hypermenu-wrapper {
+        flex-direction: column;
+    }
+
+    #dio-hypermenu .hypermenu-sidebar {
+        width: 100%;
+    }
+
+    #dio-hypermenu .hypermenu-panels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    #dio-hypermenu .hypermenu-panels {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #dio-hypermenu {
+        padding: 3rem 1.5rem;
+    }
+
+    #dio-hypermenu .title {
+        font-size: 1.6rem;
+    }
+
+    #dio-hypermenu .hypermenu-panel {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+
+}

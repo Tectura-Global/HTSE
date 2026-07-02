@@ -10,6 +10,8 @@ import Pillars from './sections/Pillars'
 import PIMS from './sections/PIMS'
 import IntEco from './sections/IntEco'
 import PIMSBeam from './components/PIMSBeam'
+import DIOBeam from './components/DIOBeam'
+import DIOHypermenu from './sections/DIOHypermenu'
 
 export function App() {
 
@@ -21,9 +23,11 @@ export function App() {
         <Hero />
         <CTA />
         <Pillars />
-        <IntEco />
         <IBO />
+        <IntEco />
         <Services />
+        <DIOBeam />
+        <DIOHypermenu />
         {/* <SmartBuilding /> */}
         <PIMSBeam />
         <PIMS />

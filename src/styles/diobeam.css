@@ -1,0 +1,92 @@
+#dio-beam{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:6rem 0;
+}
+
+#dio-beam .dio-beam-container{
+    position:relative;
+
+    width:1000px;
+    height:900px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#dio-beam .dio-node{
+    position:absolute;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    width:220px;
+    min-height:120px;
+
+    padding:1.5rem;
+
+    border-radius:20px;
+
+    background:#0d1b2a;
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    z-index:20;
+}
+
+#dio-beam .dio-node .site-p{
+    color:white;
+}
+
+#dio-beam .center{
+    width:180px;
+    height:180px;
+
+    border-radius:999px;
+    overflow:hidden;
+}
+
+#dio-beam .center-node-logo{
+    width:90px;
+}
+
+/* surrounding nodes */
+
+#dio-beam .top{
+    top:30px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+#dio-beam .upper-right{
+    top:180px;
+    right:40px;
+}
+
+#dio-beam .lower-right{
+    bottom:180px;
+    right:40px;
+}
+
+#dio-beam .bottom{
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+#dio-beam .upper-left{
+    top:180px;
+    left:40px;
+}
+
+/* beam svg */
+
+#dio-beam svg{
+    z-index:5;
+}

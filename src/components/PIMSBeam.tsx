@@ -66,11 +66,11 @@ function PIMSBeam() {
 
             <AnimatedBeam containerRef={containerRef} fromRef={procurementRef} toRef={centerRef} duration={4} pathWidth={4} />
             <AnimatedBeam containerRef={containerRef} fromRef={installRef} toRef={centerRef} duration={4} pathWidth={4} curvature={-120} reverse />
-            <AnimatedBeam containerRef={containerRef} fromRef={assetRef} toRef={centerRef} duration={4} pathWidth={4} curvature={-180} reverse />
+            <AnimatedBeam containerRef={containerRef} fromRef={assetRef} toRef={centerRef} duration={4} pathWidth={4} curvature={0} reverse />
             <AnimatedBeam containerRef={containerRef} fromRef={biomedicalRef} toRef={centerRef} duration={4} pathWidth={4} curvature={120} reverse />
             <AnimatedBeam containerRef={containerRef} fromRef={digitalRef} toRef={centerRef} duration={4} pathWidth={4} />
             <AnimatedBeam containerRef={containerRef} fromRef={fieldRef} toRef={centerRef} duration={4} pathWidth={4} curvature={120} />
-            <AnimatedBeam containerRef={containerRef} fromRef={disasterRef} toRef={centerRef} duration={4} pathWidth={4} curvature={180} />
+            <AnimatedBeam containerRef={containerRef} fromRef={disasterRef} toRef={centerRef} duration={4} pathWidth={4} curvature={0} />
             <AnimatedBeam containerRef={containerRef} fromRef={emergencyRef} toRef={centerRef} duration={4} pathWidth={4} curvature={-120} />
 
         </div>
